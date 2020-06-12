@@ -1,0 +1,26 @@
+﻿
+@model Dojodachi  //this is failing, why?
+
+    <div class="panel">
+        <p>
+            <span>Fullness: @ViewBag.Fullness</span>
+            <span>Happiness: @ViewBag.Happiness</span>
+            <span>Energy: @ViewBag.Energy</span>
+            <span>Meals: @ViewBag.Meals</span>
+        </p>
+
+        <div class="photo">
+            <img src="~/img/pikachu.jpeg" /> 
+            <p>@ViewBag.Message</p>
+        </div>
+        <form action="/GoDachi" method="post">
+            <input type="submit" name="activity" value="Feed">
+        </form><form action="/GoDachi" method="post">
+            <input type="submit" name="activity" value="Play">
+        </form><form action="/GoDachi" method="post">
+            <input type="submit" name="activity" value="Work">
+        </form><form action="/GoDachi" method="post">
+            <input type="hidden" name="activity" value="Sleep" />
+            <button type="submit">Sleep</button>
+        </form>
+    </div>
